@@ -1,11 +1,13 @@
-# Very short description of the package
+
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/location-demografia.svg?style=flat-square)](https://packagist.org/packages/epmnzava/location-demografia)
 [![Build Status](https://img.shields.io/travis/epmnzava/location-demografia/master.svg?style=flat-square)](https://travis-ci.org/epmnzava/location-demografia)
 [![Quality Score](https://img.shields.io/scrutinizer/g/epmnzava/location-demografia.svg?style=flat-square)](https://scrutinizer-ci.com/g/epmnzava/location-demografia)
 [![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/location-demografia.svg?style=flat-square)](https://packagist.org/packages/epmnzava/location-demografia)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+## About location-demografia
+
+Everytime we as developers  require to fill up world countries and fetch cities from countries etc. This package provides you a great way to get started with location ( countries , cities and  states ).You are welcome to use , reuse and distribute under ( MIT license).
 
 ## Installation
 
@@ -18,7 +20,7 @@ composer require epmnzava/location-demografia
 ## Usage
 
 ``` php
-// Usage description here
+// someting nice is coming soon
 ```
 
 ### Testing
@@ -41,13 +43,10 @@ If you discover any security related issues, please email epmnzava@gmail.com ins
 
 ## Credits
 
-- [Emmanuel Mnzava](https://github.com/epmnzava)
+- [Emmanuel Mnzava](https://github.com/dbrax)
 - [All Contributors](../../contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).

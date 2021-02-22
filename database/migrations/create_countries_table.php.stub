@@ -1,0 +1,56 @@
+<?php
+
+
+/**
+ * Author: Emmanuel Paul Mnzava
+ * Twitter: @epmnzava
+ * Github:https://github.com/dbrax/location-demographia
+ * Email: epmnzava@gmail.com
+ * 
+ */
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateBillingPaymentTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('billing_payments', function (Blueprint $table) {
+            $table->bigIncrements('id');
+
+                //if the user has loggin you can save the user id
+            $table->integer('userid')->nullable();
+            
+            $table->string('invoiceid'); //required attribute
+            $table->string('orderid'); //required attribute
+            $table->integer('amount'); //required attribute
+            $table->string('status')->default('pending'); //required attribute
+            $table->string('trackingid')->nullable(); //required attribute
+            $table->date("date");
+            $table->string('payment_method')->nullable();
+
+
+
+
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('billing_payments');
+    }
+}
