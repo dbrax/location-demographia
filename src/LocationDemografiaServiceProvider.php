@@ -32,6 +32,18 @@ class LocationDemografiaServiceProvider extends ServiceProvider
                 __DIR__ . '/../config/config.php' => config_path('location-demografia.php'),
             ], 'config');
 
+
+                       //publishing migrations here..
+                       if (!class_exists('CreateStatesTable') && !class_exists('CreateCountriesTable') && !class_exists('CreateCitiesTable')) {
+                        $this->publishes([
+                            __DIR__ . '/../database/migrations/create_cities_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_cities_table_table.php'),
+                            __DIR__ . '/../database/migrations/create_countries_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_countries_table.php'),
+                            __DIR__ . '/../database/migrations/create_states_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_states_table.php'),
+
+        
+                        ], 'migrations');
+                    }
+
             // Publishing the views.
             /*$this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/location-demografia'),

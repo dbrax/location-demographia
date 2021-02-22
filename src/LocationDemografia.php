@@ -10,7 +10,24 @@
 
 namespace Epmnzava\LocationDemografia;
 
+use Epmnzava\LocationDemografia\Models\Country;
+use Epmnzava\LocationDemografia\Models\State;
+
 class LocationDemografia
 {
-    // Build your next great package.
+    public function getCountries()
+    {
+        return Country::all();
+    }
+
+    public function getStates()
+    {
+        return State::all();
+    }
+
+    public function getCountriesState($countryid)
+    {
+        //keep a validation here to check if the country has states
+        return State::where('countryid',$countryid)->get();
+    }
 }
