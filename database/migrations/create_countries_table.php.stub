@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBillingPaymentTable extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,24 +22,11 @@ class CreateBillingPaymentTable extends Migration
      */
     public function up()
     {
-        Schema::create('billing_payments', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-                //if the user has loggin you can save the user id
-            $table->integer('userid')->nullable();
-            
-            $table->string('invoiceid'); //required attribute
-            $table->string('orderid'); //required attribute
-            $table->integer('amount'); //required attribute
-            $table->string('status')->default('pending'); //required attribute
-            $table->string('trackingid')->nullable(); //required attribute
-            $table->date("date");
-            $table->string('payment_method')->nullable();
-
-
-
-
-
+            $table->string('name');
+            $table->string('code'); //required attribute
+            $table->string('state',225)->nullable(); //required attribute
             $table->timestamps();
         });
     }
@@ -51,6 +38,6 @@ class CreateBillingPaymentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billing_payments');
+        Schema::dropIfExists('countries');
     }
 }

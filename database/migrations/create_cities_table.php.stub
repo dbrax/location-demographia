@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInvoicesTable extends Migration
+class CreateCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,32 +22,11 @@ class CreateInvoicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('invoices', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-              //if the user has loggin you can save the user id
-            $table->integer('userid')->nullable();
-            
-            $table->string('orderid'); //required attribute
-            $table->integer('amount'); //required attribute
-            $table->string('firstname'); //required attribute
-            $table->string('lastname')->nullable();
-            $table->string('mobile_number')->nullable();
-            $table->string('email'); // required attribute
-            $table->string('status')->default('pending');
-            $table->string('address')->nullable();
-            $table->string('invoice_type')->nullable();
-            $table->string('notes')->nullable(); // if any notes
-            $table->string('invoice_title')->nullable(); // if the invoice has a title
-            $table->date("date"); //initiated date
-            $table->date("due_date")->nullable(); //not required in some usecase
-            $table->string('payment_method')->nullable();
-
-
-
-
-
-
+            $table->string('country_id');
+            $table->string('name'); //required attribute
+            $table->string('code')->nullable(); 
             $table->timestamps();
         });
     }
@@ -59,6 +38,6 @@ class CreateInvoicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('invoices');
+        Schema::dropIfExists('cities');
     }
 }

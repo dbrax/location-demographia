@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Author: Emmanuel Paul Mnzava
+ * Twitter: @epmnzava
+ * Github:https://github.com/dbrax/location-demographia
+ * Email: epmnzava@gmail.com
+ * 
+ */
+
 namespace Epmnzava\LocationDemografia;
 
 use Illuminate\Support\ServiceProvider;
@@ -21,7 +29,7 @@ class LocationDemografiaServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('location-demografia.php'),
+                __DIR__ . '/../config/config.php' => config_path('location-demografia.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,7 +58,7 @@ class LocationDemografiaServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'location-demografia');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'location-demografia');
 
         // Register the main class to use with the facade
         $this->app->singleton('location-demografia', function () {
