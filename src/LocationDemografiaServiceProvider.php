@@ -10,6 +10,7 @@
 
 namespace Epmnzava\LocationDemografia;
 
+use Epmnzava\LocationDemografia\Console\LoadData;
 use Illuminate\Support\ServiceProvider;
 
 class LocationDemografiaServiceProvider extends ServiceProvider
@@ -28,6 +29,11 @@ class LocationDemografiaServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
+
+            $this->commands([
+                LoadData::class,
+            ]);
+
             $this->publishes([
                 __DIR__ . '/../config/config.php' => config_path('location-demografia.php'),
             ], 'config');
