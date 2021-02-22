@@ -5,7 +5,7 @@
         "epmnzava",
         "location-demografia"
     ],
-    "homepage": "https://github.com/epmnzava/location-demografia",
+    "homepage": "https://github.com/dbrax/location-demografia",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,8 +16,8 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "php": "^7.1|^7.2|^7.3",
+        "illuminate/support": "^5.5.44|^6.0|^7.0|^8.0"  
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
