@@ -52,9 +52,10 @@ class LoadData extends Command
 
         $reponse = json_decode($this->fetchData());
 
-        $country = new Country();
+       
 
         foreach ($reponse->result as $nation) {
+            $country = new Country();
             $country->name = $nation->name;
             $country->code = $nation->code;
             $country->state = json_encode($nation->states);
