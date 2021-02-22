@@ -32,6 +32,8 @@ class LoadData extends Command
 
         ]);
 
+        $this->call('migrate', []);
+
         $this->loadDataFromApi();
 
         $this->info('data loaded');
@@ -44,7 +46,7 @@ class LoadData extends Command
 
         $country = new Country();
 
-        foreach ($reponse as $nation) {
+        foreach ($reponse->result as $nation) {
             $country->name = $nation->name;
             $country->code = $nation->code;
             $country->state = json_encode($nation->states);
