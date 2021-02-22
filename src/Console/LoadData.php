@@ -32,11 +32,19 @@ class LoadData extends Command
 
         ]);
 
+        $this->info('finished publishing the package');
+
+        $this->info('begining to migrate');
+
+
         $this->call('migrate', []);
+
+        $this->info('Finished  migrating');
+
 
         $this->loadDataFromApi();
 
-        $this->info('data loaded');
+        $this->info('Finished loading dta');
     }
 
     public function loadDataFromApi()
