@@ -9,7 +9,18 @@
 
 Everytime we as developers  require to fill up world countries and fetch cities from countries etc. This package provides you a great way to get started with location ( countries , cities and  states ).You are welcome to use , reuse and distribute under ( MIT license).
 
+
+## Version Matrix
+
+Version | Laravel   | PHP Version
+------- | --------- | ------------
+1.5     | 8.0       | >= 7.3
+1.3     | 7.0       | >= 7.2.5
+
+
+
 ## Installation
+
 
 You can install the package via composer:
 
@@ -17,10 +28,29 @@ You can install the package via composer:
 composer require epmnzava/location-demografia
 ```
 
+
+# Update your config (for Laravel 5.4 and below)
+Add the service provider to the providers array in config/app.php:
+
+```
+"Epmnzava\LocationDemografia\LocationDemografiaServiceProvider"::class
+```
+
+Add the facade to the aliases array in config/app.php:
+
+```
+'Location'=>Epmnzava\LocationDemografia\LocationDemografiaFacade,
+```
+
+After you add the above classes on config/app.php run below command to publish config , run migrations  and load data thus ( countries and their states). 
+```bash
+php artisan  locationdemografia:install
+```
+
 ## Usage
 
 ``` php
-// someting nice is coming soon
+// will be uploading various queries avaialble in this lib
 ```
 
 ### Testing
