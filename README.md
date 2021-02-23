@@ -56,7 +56,27 @@ php artisan  locationdemografia:install --loadonly
 ## Usage
 
 ``` php
-// will be uploading various queries avaialble in this lib
+<?php
+
+use Epmnzava\LocationDemografia;
+
+class TestController extends Controller{
+public function test(){
+
+$location= new LocationDemografia;
+
+//get all countries 
+$countries=$location->getCountries();
+
+//get all countries states
+
+$states=$location->getCountriesState($countryid);
+
+
+
+}
+
+}
 ```
 
 ### Testing
