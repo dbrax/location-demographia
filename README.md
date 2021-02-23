@@ -47,6 +47,12 @@ After you add the above classes on config/app.php run below command to publish c
 php artisan  locationdemografia:install
 ```
 
+If you have the necessary tables already on your database you can easily run the following command to only load the necessary location data.
+
+```bash
+php artisan  locationdemografia:install --loadonly
+```
+
 ## Usage
 
 ``` php
