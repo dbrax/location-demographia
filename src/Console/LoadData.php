@@ -16,7 +16,7 @@ use Illuminate\Console\Command;
 
 class LoadData extends Command
 {
-    protected $signature = 'locationdemografia:install --loadonly';
+    protected $signature = 'locationdemografia:install {--loadonly}';
 
     //add command tag to only feed countries or states etc
 
