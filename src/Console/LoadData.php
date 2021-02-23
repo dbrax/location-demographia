@@ -16,7 +16,7 @@ use Illuminate\Console\Command;
 
 class LoadData extends Command
 {
-    protected $signature = 'locationdemografia:install';
+    protected $signature = 'locationdemografia:install --loadonly';
 
     //add command tag to only feed countries or states etc
 
@@ -24,6 +24,7 @@ class LoadData extends Command
 
     public function handle()
     {
+        if($this->option('loadonly')==false){
         $this->info('initiating loading data LocationDemografia...');
 
         ///  $this->info('Publishing configuration...');
@@ -45,6 +46,14 @@ class LoadData extends Command
         $this->loadDataFromApi();
 
         $this->info('Finished loading dta');
+    }
+    else{
+    $this->loadDataFromApi();
+    $this->info('Finished loading dta');
+
+    }
+
+
     }
 
     public function loadDataFromApi()
