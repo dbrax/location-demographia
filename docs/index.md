@@ -1,37 +1,108 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/dbrax/location-demographia/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/epmnzava/location-demografia.svg?style=flat-square)](https://packagist.org/packages/epmnzava/location-demografia)
+[![Build Status](https://img.shields.io/travis/epmnzava/location-demografia/master.svg?style=flat-square)](https://travis-ci.org/epmnzava/location-demografia)
+[![Quality Score](https://img.shields.io/scrutinizer/g/epmnzava/location-demografia.svg?style=flat-square)](https://scrutinizer-ci.com/g/epmnzava/location-demografia)
+[![Total Downloads](https://img.shields.io/packagist/dt/epmnzava/location-demografia.svg?style=flat-square)](https://packagist.org/packages/epmnzava/location-demografia)
 
-### Markdown
+## About location-demografia
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Everytime we as developers  require to fill up world countries and fetch cities from countries etc. This package provides you a great way to get started with location ( countries , cities and  states ).You are welcome to use , reuse and distribute under ( MIT license).
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## Version Matrix
 
-- Bulleted
-- List
+Version | Laravel   | PHP Version
+------- | --------- | ------------
+1.5     | 8.0       | >= 7.3
+1.3     | 7.0       | >= 7.2.5
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+## Installation
+
+
+You can install the package via composer:
+
+```bash
+composer require epmnzava/location-demografia
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+# Update your config (for Laravel 5.4 and below)
+Add the service provider to the providers array in config/app.php:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dbrax/location-demographia/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+"Epmnzava\LocationDemografia\LocationDemografiaServiceProvider"::class
+```
 
-### Support or Contact
+Add the facade to the aliases array in config/app.php:
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```
+'Location'=>Epmnzava\LocationDemografia\LocationDemografiaFacade,
+```
+
+After you add the above classes on config/app.php run below command to publish config , run migrations  and load data thus ( countries and their states). 
+```bash
+php artisan  locationdemografia:install
+```
+
+If you have the necessary tables already on your database you can easily run the following command to only load the necessary location data.
+
+```bash
+php artisan  locationdemografia:install --loadonly
+```
+
+## Usage
+
+``` php
+<?php
+
+use Epmnzava\LocationDemografia;
+
+class TestController extends Controller{
+public function test(){
+
+$location= new LocationDemografia;
+
+//get all countries 
+$countries=$location->getCountries();
+
+//get all countries states
+
+$states=$location->getCountriesState($countryid);
+
+
+
+}
+
+}
+```
+
+### Testing
+
+``` bash
+composer test
+```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security
+
+If you discover any security related issues, please email epmnzava@gmail.com instead of using the issue tracker.
+
+## Credits
+
+- [Emmanuel Mnzava](https://github.com/dbrax)
+- [All Contributors](../../contributors)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
