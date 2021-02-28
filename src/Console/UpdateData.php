@@ -14,42 +14,20 @@ use Epmnzava\LocationDemografia\Models\Country;
 use Epmnzava\LocationDemografia\Models\State;
 use Illuminate\Console\Command;
 
-class LoadData extends Command
+class UpdateData extends Command
 {
-    protected $signature = 'locationdemografia:install {--loadonly}';
+    protected $signature = 'locationdemografia:update ';
 
     //add command tag to only feed countries or states etc
 
-    protected $description = 'This command will load countries , states and cities from the given endpoint';
+    protected $description = 'This command will  load countries , states and cities from the given endpoint';
 
     public function handle()
     {
-        if ($this->option('loadonly') == false) {
-            $this->info('initiating loading data LocationDemografia...');
 
-            ///  $this->info('Publishing configuration...');
-            $this->call('vendor:publish', [
-                '--provider' => "Epmnzava\LocationDemografia\LocationDemografiaServiceProvider"
-
-            ]);
-
-            $this->info('finished publishing the package');
-
-            $this->info('begining to migrate');
-
-
-            $this->call('migrate', []);
-
-            $this->info('Finished  migrating');
-
-
-            $this->loadDataFromApi();
-
-            $this->info('Finished loading data');
-        } else {
-            $this->loadDataFromApi();
-            $this->info('Finished loading dta');
-        }
+        $this->info('initiate loading from api :)');
+        $this->loadDataFromApi();
+        $this->info('Finished loading data from api');
     }
 
     public function loadDataFromApi()
