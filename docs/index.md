@@ -110,7 +110,7 @@ If you discover any security related issues, please email epmnzava@gmail.com ins
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 ## Any questions or comments hit me up on
-[Mail](mailto:epmnzava@gmail.com)       epmnzava@gmail.com 
-[Twitter](https://twitter.com/epmnzava) https://twitter.com/epmnzava
-[Github](https://github.com/dbrax)      https://github.com/dbrax
+- [Mail](mailto:epmnzava@gmail.com)       epmnzava@gmail.com 
+- [Twitter](https://twitter.com/epmnzava) https://twitter.com/epmnzava
+- [Github](https://github.com/dbrax)      https://github.com/dbrax
 
