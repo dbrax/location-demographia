@@ -7,7 +7,7 @@
 
 ## About location-demografia
 
-Everytime we as developers  require to fill up world countries and fetch cities from countries etc. This package provides you a great way to get started with location ( countries , cities and  states ).You are welcome to use , reuse and distribute under ( MIT license).
+From time to time  we as developers  require to fill up world countries and fetch cities from countries etc. This library package provides you a qucik and easy  way to get started with location ( countries , cities and  states ).You are welcome to use , reuse and distribute under ( MIT license).
 
 
 ## Version Matrix
