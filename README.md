@@ -14,8 +14,9 @@ From time to time  we as developers  require to fill up world countries and fetc
 
 Version | Laravel   | PHP Version
 ------- | --------- | ------------
-1.5     | 8.0       | >= 7.3
-1.3     | 7.0       | >= 7.2.5
+1.5     | 8.0       | >= 8.0
+1.4     | 8.0       | >= 7.3
+1.2     | 7.0       | >= 7.2.5
 
 
 
@@ -107,4 +108,9 @@ If you discover any security related issues, please email epmnzava@gmail.com ins
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Any questions or comments hit me up on
+[Mail](mailto:epmnzava@gmail.com)       epmnzava@gmail.com 
+[Twitter](https://twitter.com/epmnzava) https://twitter.com/epmnzava
+[Github](https://github.com/dbrax)      https://github.com/dbrax
 
