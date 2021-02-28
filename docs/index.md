@@ -114,7 +114,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 - [Twitter](https://twitter.com/epmnzava) https://twitter.com/epmnzava
 - [Github](https://github.com/dbrax)      https://github.com/dbrax
 
-Or leave a comment below
 
 <script src="https://utteranc.es/client.js"
         repo="dbrax / location-demographia"
