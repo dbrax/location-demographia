@@ -13,7 +13,7 @@ namespace Epmnzava\LocationDemografia;
 use Epmnzava\LocationDemografia\Models\Country;
 use Epmnzava\LocationDemografia\Models\State;
 
-class LocationDemografia
+class LocationDemografia extends Queries
 {
     public function getCountries()
     {

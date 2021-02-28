@@ -72,6 +72,8 @@ $countries=$location->getCountries();
 
 $states=$location->getCountriesState($countryid);
 
+//search countries
+$country=$location->search_country($countryid);
 
 
 }
